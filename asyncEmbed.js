@@ -1,11 +1,11 @@
 //An embed function to clean up your code with style.
-async function embed(c, t, d) {
+async function embed(colour, title, description) {
   try {
     await msg.channel.send("", {embed: {
       author: {name: msg.author.username, iconURL: msg.author.displayAvatarURL},
-      color: c,
-      title: t,
-      description: c,
+      color: colour,
+      title: title,
+      description: description,
       timestamp: new Date(),
     }});
   } catch(e) {
