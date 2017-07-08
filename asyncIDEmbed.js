@@ -1,3 +1,4 @@
+//Send an embed to a specific channel via provided parameter.
 async function embed(id, c, t, d) {
   try {
     msg.guild.channels.get(id).send("", {embed: {
