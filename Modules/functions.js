@@ -37,32 +37,5 @@ module.exports = {
     } catch(e) {
       console.error(e);
     }
-  },
-  memberAction: async function(msg, action) {
-    try {
-      if(action === "kick") {
-        let member = await msg.mentions.members.first();
-        if(!member) return embed(0xff0000, "Invalid member mention!", "Please mention a member to kick!");
-        if(msg.member.highestRole.position <= member.highestRole.position)
-          return embed(0xff0000, "Invalid Permissions!", "That user has a higher role then you or their highest role is equal to yours!");
-        if(msg.guild.member(bot.user).highestRole.position <= member.highestRole.position)
-          return embed(0xff0000, "Invalid Permissions!", "That user has a higher role then I do, or their highest role is equal to mine!");
-        await member.kick();
-        embed(0xff0000, "Successfully Kicked User!", `User: ${user.tag} (${user.id})`);
-      } else if(action === "ban") {
-        let member = await msg.mentions.members.first();
-        if(!member) return embed(0xff0000, "Invalid member mention!", "Please mention a member to kick!");
-        if(msg.member.highestRole.position <= member.highestRole.position)
-          return embed(0xff0000, "Invalid Permissions!", "That user has a higher role then you or their highest role is equal to yours!");
-        if(msg.guild.member(bot.user).highestRole.position <= member.highestRole.position)
-          return embed(0xff0000, "Invalid Permissions!", "That user has a higher role then I do, or their highest role is equal to mine!");
-        await member.ban(2);
-        embed(0xff0000, "Successfully Banned User!", `User: ${user.tag} (${user.id})`);
-      } else {
-        return;
-      }
-    } catch (e) {
-      console.error(e);
-    }
   }
 };
