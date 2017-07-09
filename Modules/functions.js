@@ -14,7 +14,7 @@ module.exports = {
   },
   embedID: async function(msg, id, colour, title, description) {
     try {
-      msg.guild.channels.get(id).send("", {embed: {
+      await msg.guild.channels.get(id).send("", {embed: {
         author: {name: msg.author.tag, iconURL: msg.author.displayAvatarURL},
         color: colour,
         title: title,
@@ -27,7 +27,7 @@ module.exports = {
   },
   embedDM: async function(msg, userid, colour, title, description) {
     try {
-      msg.guild.members.get(userid).send("", {embed: {
+      await msg.guild.members.get(userid).send("", {embed: {
         author: {name: msg.tag, iconURL: msg.author.displayAvatarURL},
         color: colour,
         title: title,
