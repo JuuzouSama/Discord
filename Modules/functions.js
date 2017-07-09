@@ -11,7 +11,7 @@ module.exports = {
     } catch(e) {
     console.error(e);
     }
-  };
+  },
   embedID: async function(msg, id, colour, title, description) {
     try {
       msg.guild.channels.get(id).send("", {embed: {
@@ -24,7 +24,7 @@ module.exports = {
     } catch(e) {
       console.error(e);
     }
-  };
+  },
   memberAction: async function(msg, action) {
     try {
       if(action === "kick") {
@@ -41,5 +41,5 @@ module.exports = {
     } catch (e) {
       console.error(e);
     }
-  };
+  }
 };
