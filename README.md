@@ -1,4 +1,13 @@
-# Discord-Functions
-Functions I frequently use in order to make my life easier throughout the magnificent world of discord.js.
+# Discord
+My experience with discord, summed up in one respository.
+I've spent a few years messing around with the discord.js libary, and it's be a very fun experience!
 
-This functions are generally asynchronous to allow me to catch error outputs more efficiently with less hassle, plus they look cool.
+# What you'll find:
+- Functions
+- Modules
+- Commands
+- Bots
+- Selfbots
+
+# Misc
+If you ever need any help with discord.js, don't hesitate to message me: Charlie#1062
