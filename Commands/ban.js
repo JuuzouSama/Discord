@@ -1,10 +1,14 @@
-const functions = require("../functions.js");
-exports.run = function(bot, msg) {
-  let member = msg.mentions.members.first();
-  if(!member) return functions.embed(msg, 0xff0000, "Invalid user mention!", "Please mention a user to ban!");
-  member.ban(2);
-  functions.embed(msg, 0xff0000, "Successfully banned user!", `${member.user.tag} (${member.user.id})`);
-}
+exports.run = async function(bot, msg) {
+    let member = await msg.mentions.members.first();
+    if(!member) return msg.reply("You need to mention someone you plant!");
+    let myRole = msg.member.highestRole.position;
+    let memberRole = member.highestRole.position;
+    let botRole = msg.guild.member(bot.user).highestRole.position;
+    if(myRole <= memberRole) return msg.reply("Unable to ban as the mentioned user has a higher/equal role to you!");
+    if(myRole <= botRole) return msg.reply("Unable to ban as the mentioned user has a higher/equal role to me!");
+    member.ban();
+    msg.reply(`I have successfully banned ${member.user.tag}`);
+};
 
 exports.conf = {
   enabled: true,
