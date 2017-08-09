@@ -29,7 +29,6 @@ between the string quotes and if you want to give any specific people a certain 
 I'd like to give a huge thank you to a good friend of mine, LuaFuncX, he has been one of the developers who I have many laughs with and many
 success with during using discord.js.
 
-Enjoy Hexusbot,
-                Charlie.
+Enjoy Hexusbot.
 
 
