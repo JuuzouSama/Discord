@@ -18,7 +18,8 @@ Considering i've given you an entire bot source, it shouldn't take a genious to 
 https://nodejs.org/en/
 
 > Installing node modules:
-No need, their all provided in the source.
+You will need:
+ms, require and discord.js
 
 > Giving yourself owner permissions:
 In the main file: (app.js), at the bottom their is a elevation export which exports permission levels, on line (53), insert your discord id
