@@ -8,7 +8,7 @@ exports.run = function(bot, msg, args) {
   let muteRole = msg.guild.roles.find("name", "Muted");
   if(!muteRole) return msg.reply("I couldn't find a mute role by the name of `Muted`");
   //Checks if you have added an amount of time to the mute arguments!
-  let time = args[1];
+  let time = args.join(" ");
   if(!time) return msg.reply("Please specify a time to mute for!");
   //Checks if you have supplied a reason to the arguments!
   let reason = args.slice(1).join(" ");
